@@ -1,0 +1,178 @@
+/* ═══════════════════════════════════════════════
+   custom.css — Wedding Invitation Site
+   Fauzi & Diyanah · 17 October 2026
+   ═══════════════════════════════════════════════ */
+
+/* ── Base ────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ── Hero Section ────────────────────────────── */
+/*
+   Replace the gradient below with your hero photo:
+   .hero-section { background-image: url('../assets/images/hero-bg.jpg'); }
+
+   To use your own photo, add it to assets/images/ and update the line above.
+   The gradient acts as a beautiful fallback if no image is set.
+*/
+.hero-section {
+  background-image:
+    url('../assets/images/hero-bg.jpg'),
+    linear-gradient(155deg, #1a1a40 0%, #2e3478 35%, #4E5899 65%, #6E78C0 100%);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  /* Disable parallax on mobile for smoother performance */
+  .hero-section {
+    background-attachment: scroll;
+  }
+}
+
+/* ── Navbar Links ────────────────────────────── */
+.nav-link {
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+  transition: color 0.2s ease;
+}
+.nav-link:hover {
+  color: #C9A84C;
+}
+
+/* Navbar scrolled state */
+#navbar.scrolled {
+  background: rgba(78, 88, 153, 0.95);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 1px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* ── Scroll Fade-Up Animation ────────────────── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(1.75rem);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── RSVP Form Elements ──────────────────────── */
+.rsvp-card {
+  position: relative; /* Required for loading overlay */
+}
+
+.rsvp-input {
+  border: 1px solid rgba(126, 126, 150, 0.3);
+  padding: 0.75rem 1rem;
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 0.875rem;
+  color: #4E5899;
+  background-color: #F8F8FD;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+.rsvp-input::placeholder {
+  color: rgba(126, 126, 150, 0.5);
+}
+.rsvp-input:focus {
+  border-color: #C9A84C;
+}
+
+/* Selected state — Side buttons */
+.side-btn.selected {
+  border-color: #C9A84C;
+  background-color: rgba(201, 168, 76, 0.08);
+}
+.side-btn.selected span:last-child {
+  color: #4E5899;
+}
+
+/* Selected state — Pax buttons */
+.pax-btn.selected {
+  border-color: #C9A84C;
+  background-color: rgba(201, 168, 76, 0.08);
+  color: #4E5899;
+}
+
+/* Submit button disabled state */
+.rsvp-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ── Loading Overlay ─────────────────────────── */
+.rsvp-loading-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.loading-spinner {
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid #C9A84C;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Confetti Particles ──────────────────────── */
+.confetti-particle {
+  position: fixed;
+  top: -12px;
+  pointer-events: none;
+  z-index: 9999;
+  border-radius: 2px;
+  animation: confetti-fall linear forwards;
+}
+
+@keyframes confetti-fall {
+  0%   { transform: translateY(0)      rotate(0deg)   scale(1);   opacity: 1; }
+  75%  { opacity: 1; }
+  100% { transform: translateY(105vh)  rotate(680deg) scale(0.4); opacity: 0; }
+}
+
+/* ── Custom Scrollbar ────────────────────────── */
+::-webkit-scrollbar       { width: 4px; }
+::-webkit-scrollbar-track { background: #F8F8FD; }
+::-webkit-scrollbar-thumb { background: #C9A84C; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #6E78C0; }
+
+/* ── Selection colour ────────────────────────── */
+::selection {
+  background: rgba(110, 120, 192, 0.2);
+  color: #4E5899;
+}
+
+/* ── Easter Egg: Edwin Sng popup ─────────────── */
+#edwin-popup {
+  display: none;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 9000;
+}
+#edwin-popup.show {
+  display: block;
+  animation: edwinSlideIn 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+@keyframes edwinSlideIn {
+  from { transform: translateX(110%); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
