@@ -502,19 +502,30 @@
               Bringing a plus one?
             </p>
           </div>
-          <div class="flex gap-3 mb-8">
-            <button class="pax-btn flex-1 py-5 border-2 border-stone/20 font-body text-sm text-stone hover:border-gold hover:text-moss-dark transition-all duration-200"
-                    data-pax="1">
-              1 Pax
-            </button>
-            <button class="pax-btn flex-1 py-5 border-2 border-stone/20 font-body text-sm text-stone hover:border-gold hover:text-moss-dark transition-all duration-200"
-                    data-pax="2">
-              2 Pax
-            </button>
-            <button class="pax-btn flex-1 py-5 border-2 border-stone/20 font-body text-sm text-stone hover:border-gold hover:text-moss-dark transition-all duration-200"
-                    data-pax="3+">
-              3+ Pax
-            </button>
+          <div class="mb-6 relative">
+            <select id="pax-select" class="rsvp-input w-full appearance-none bg-white pr-10 cursor-pointer font-body text-sm text-moss-dark">
+              <option value="1">Just me (1 Pax)</option>
+              <option value="2">Bringing a Plus One (2 Pax)</option>
+              <option value="3">Bringing family/friends (3 Pax)</option>
+              <option value="4">Bringing family/friends (4 Pax)</option>
+              <option value="5">Bringing family/friends (5+ Pax)</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-stone">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+          </div>
+          <div id="plus-ones-container" class="mb-8 hidden">
+            <label for="plus-ones-names" class="font-body text-xs tracking-[0.2em] uppercase text-stone mb-2 block">
+              Name(s) of your Plus One(s) <span class="text-gold">*</span>
+            </label>
+            <textarea id="plus-ones-names" rows="2"
+                      placeholder="Please list their full names..."
+                      class="rsvp-input w-full resize-none"></textarea>
+            <p id="plus-ones-error" class="text-xs text-red-400 mt-2 hidden">
+              Please provide the name(s) of your additional guest(s).
+            </p>
           </div>
           <button id="btn-next-4"
                   class="w-full py-4 bg-moss text-white font-body text-sm tracking-[0.2em] uppercase hover:bg-moss-dark transition-colors duration-200">

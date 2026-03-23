@@ -211,27 +211,54 @@ function initRSVPForm() {
     showStep('step-yes-4');
   });
 
-  // Step 4 — pax selection (default: first button)
-  const paxBtns = document.querySelectorAll('.pax-btn');
-  paxBtns[0]?.classList.add('selected'); // highlight "1 Pax" by default
+  // Step 4 — pax selection via dropdown
+  const paxSelect = document.getElementById('pax-select');
+  const plusOnesContainer = document.getElementById('plus-ones-container');
+  const plusOnesNamesInput = document.getElementById('plus-ones-names');
+  const plusOnesError = document.getElementById('plus-ones-error');
 
-  paxBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      paxBtns.forEach(b => b.classList.remove('selected'));
-      btn.classList.add('selected');
-      rsvpData.pax = btn.dataset.pax;
-    });
+  paxSelect?.addEventListener('change', (e) => {
+    rsvpData.pax = e.target.value;
+    if (parseInt(e.target.value) > 1) {
+      plusOnesContainer?.classList.remove('hidden');
+    } else {
+      plusOnesContainer?.classList.add('hidden');
+      if (plusOnesNamesInput) plusOnesNamesInput.value = '';
+      if (plusOnesError) plusOnesError.classList.add('hidden');
+    }
   });
 
   // Step 4 → 5
   document.getElementById('btn-next-4')?.addEventListener('click', () => {
+    const currentPax = parseInt(paxSelect?.value || '1');
+    rsvpData.pax = currentPax.toString();
+    
+    if (currentPax > 1) {
+      const names = plusOnesNamesInput?.value.trim();
+      if (!names) {
+        plusOnesError?.classList.remove('hidden');
+        plusOnesNamesInput?.focus();
+        return;
+      }
+      plusOnesError?.classList.add('hidden');
+      rsvpData.plusOnesNames = names;
+    } else {
+      rsvpData.plusOnesNames = '';
+    }
     showStep('step-yes-5');
   });
 
   // Step 5 — final submit (attending)
   document.getElementById('btn-submit-yes')?.addEventListener('click', async () => {
     rsvpData.dietary = document.getElementById('rsvp-dietary')?.value.trim() || '';
-    await submitRSVP({ ...rsvpData });
+    
+    // Combine pax with plus-ones names so we don't need a new database column
+    let finalPax = rsvpData.pax;
+    if (rsvpData.plusOnesNames) {
+      finalPax += ` (Plus Ones: ${rsvpData.plusOnesNames})`;
+    }
+    
+    await submitRSVP({ ...rsvpData, pax: finalPax });
   });
 
   // Back buttons
