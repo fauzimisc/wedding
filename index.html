@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="You're invited to the wedding of Fauzi & Diyanah — 17 October 2026, Anggun On Marina One.">
+  <title>Fauzi &amp; Diyanah — 17 October 2026</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'cloud':     '#F8F8FD',
+            'moss':      '#6E78C0',
+            'moss-dark': '#4E5899',
+            'gold':      '#C9A84C',
+            'stone':     '#7E7E96',
+            'parchment': '#F0EFF9',
+          },
+          fontFamily: {
+            'display': ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            'body':    ['"DM Sans"', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-cloud font-body text-stone antialiased">
+
+  <!-- ════════════════════════════════════════ NAV -->
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500">
+    <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="#home" class="font-display text-xl text-white/90 tracking-widest hover:text-gold transition-colors">
+        F &amp; D
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#story"    class="nav-link">Our Story</a>
+        <a href="#schedule" class="nav-link">The Day</a>
+        <a href="#location" class="nav-link">Location</a>
+        <a href="#rsvp"     class="font-body text-xs tracking-[0.2em] uppercase px-5 py-2 border border-gold/70 text-gold/90 hover:bg-gold hover:text-moss-dark transition-all duration-300">
+          RSVP
+        </a>
+      </div>
+      <!-- Mobile RSVP link -->
+      <a href="#rsvp" class="md:hidden font-body text-xs tracking-[0.2em] uppercase px-4 py-2 border border-gold/70 text-gold/90">
+        RSVP
+      </a>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════════ HERO -->
+  <section id="home" class="relative min-h-screen flex flex-col items-center justify-center hero-section">
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-moss-dark/65"></div>
+
+    <div class="relative z-10 text-center px-6 py-20">
+      <!-- Pre-heading -->
+      <p class="font-body text-xs tracking-[0.4em] uppercase text-gold mb-8 fade-up">
+        The Wedding of
+      </p>
+
+      <!-- Couple names -->
+      <div class="fade-up">
+        <h1 class="font-display font-light text-white leading-none">
+          <span class="block text-[clamp(3.5rem,14vw,8.5rem)] italic">Fauzi</span>
+          <span class="block text-gold font-light tracking-[0.2em] my-3 text-[clamp(1.5rem,5vw,3rem)]">&amp;</span>
+          <span class="block text-[clamp(3.5rem,14vw,8.5rem)] italic">Diyanah</span>
+        </h1>
+      </div>
+
+      <!-- Date & Venue -->
+      <div class="mt-10 fade-up">
+        <div class="flex items-center justify-center gap-4 mb-6">
+          <div class="w-12 h-px bg-gold/60"></div>
+          <div class="w-2 h-2 rounded-full bg-gold/60"></div>
+          <div class="w-12 h-px bg-gold/60"></div>
+        </div>
+        <p class="font-body text-xs tracking-[0.35em] uppercase text-white/75">
+          17 October 2026
+        </p>
+        <p class="font-body text-sm tracking-[0.15em] text-gold/80 mt-2">
+          Anggun On Marina One
+        </p>
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-14 fade-up">
+        <a href="#rsvp"
+           class="inline-block font-body text-xs tracking-[0.3em] uppercase px-10 py-4 border border-gold/70 text-gold hover:bg-gold hover:text-moss-dark transition-all duration-300">
+          Kindly RSVP
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <a href="#story"
+       class="absolute bottom-8 left-1/2 -translate-x-1/2 text-gold/50 animate-bounce hover:text-gold transition-colors"
+       aria-label="Scroll down">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+           stroke="currentColor" stroke-width="1.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+      </svg>
+    </a>
+  </section>
+
+  <!-- ════════════════════════════════════════ OUR STORY -->
+  <section id="story" class="py-24 md:py-36 bg-parchment overflow-hidden">
+    <div class="max-w-4xl mx-auto px-6">
+
+      <!-- Heading -->
+      <div class="text-center mb-20 fade-up">
+        <p class="font-body text-xs tracking-[0.4em] uppercase text-gold mb-4">How It Began</p>
+        <h2 class="font-display text-[clamp(2.8rem,8vw,4.5rem)] text-moss-dark font-light">Our Story</h2>
+        <div class="flex items-center justify-center gap-4 mt-6">
+          <div class="w-12 h-px bg-gold/50"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-gold/50"></div>
+          <div class="w-12 h-px bg-gold/50"></div>
+        </div>
+      </div>
+
+      <!-- Timeline -->
+      <div class="relative">
+        <!-- Desktop centre line -->
+        <div class="absolute left-1/2 -translate-x-px top-0 bottom-0 w-px bg-gold/25 hidden md:block"></div>
+        <!-- Mobile left line -->
+        <div class="absolute left-[1.35rem] top-0 bottom-0 w-px bg-gold/25 md:hidden"></div>
+
+        <!-- ── Milestone 1 ── -->
+        <div class="relative flex flex-col md:flex-row items-start md:items-center mb-16 fade-up">
+          <div class="md:w-1/2 md:pr-14 md:text-right pl-14 md:pl-0">
+            <span class="font-body text-xs tracking-[0.3em] uppercase text-gold">2022</span>
+            <h3 class="font-display text-2xl text-moss-dark font-light mt-1 mb-2">First Meeting</h3>
+            <p class="font-body text-sm text-stone leading-relaxed">
+              Two souls crossing paths for the very first time after a decade of not seeing each other.
+            </p>
+          </div>
+          <div class="absolute left-[0.85rem] md:left-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full bg-gold border-4 border-parchment top-1 md:top-auto"></div>
+          <div class="md:w-1/2 md:pl-14 hidden md:block"></div>
+        </div>
+
+        <!-- ── Milestone 2 ── -->
+        <div class="relative flex flex-col md:flex-row items-start md:items-center mb-16 fade-up">
+          <div class="md:w-1/2 md:pr-14 hidden md:block"></div>
+          <div class="absolute left-[0.85rem] md:left-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full bg-gold border-4 border-parchment top-1 md:top-auto"></div>
+          <div class="md:w-1/2 md:pl-14 pl-14">
+            <span class="font-body text-xs tracking-[0.3em] uppercase text-gold">2023</span>
+            <h3 class="font-display text-2xl text-moss-dark font-light mt-1 mb-2">Together</h3>
+            <p class="font-body text-sm text-stone leading-relaxed">
+              What began as friendship grew into something deeper — a partnership built on laughter, shared dreams, and unwavering trust.
+            </p>
+          </div>
+        </div>
+
+        <!-- ── Milestone 3 ── -->
+        <div class="relative flex flex-col md:flex-row items-start md:items-center mb-16 fade-up">
+          <div class="md:w-1/2 md:pr-14 md:text-right pl-14 md:pl-0">
+            <span class="font-body text-xs tracking-[0.3em] uppercase text-gold">Dec 2025</span>
+            <h3 class="font-display text-2xl text-moss-dark font-light mt-1 mb-2">The Proposal</h3>
+            <p class="font-body text-sm text-stone leading-relaxed">
+              Under a sky full of stars, a question was asked — and the answer was yes, a thousand times over.
+            </p>
+          </div>
+          <div class="absolute left-[0.85rem] md:left-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full bg-gold border-4 border-parchment top-1 md:top-auto"></div>
+          <div class="md:w-1/2 md:pl-14 hidden md:block"></div>
+        </div>
+
+        <!-- ── Milestone 4 (final) ── -->
+        <div class="relative flex flex-col md:flex-row items-start md:items-center fade-up">
+          <div class="md:w-1/2 md:pr-14 hidden md:block"></div>
+          <div class="absolute left-[0.85rem] md:left-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full bg-moss border-4 border-parchment top-1 md:top-auto"></div>
+          <div class="md:w-1/2 md:pl-14 pl-14">
+            <span class="font-body text-xs tracking-[0.3em] uppercase text-gold">17 October 2026</span>
+            <h3 class="font-display text-2xl text-moss-dark font-light mt-1 mb-2">Forever Begins</h3>
+            <p class="font-body text-sm text-stone leading-relaxed">
+              And now, surrounded by the people they love most, they begin the greatest chapter of all.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ THE BIG DAY -->
+  <section id="schedule" class="py-24 md:py-36 bg-cloud">
+    <div class="max-w-5xl mx-auto px-6">
+
+      <!-- Heading -->
+      <div class="text-center mb-16 fade-up">
+        <p class="font-body text-xs tracking-[0.4em] uppercase text-gold mb-4">Saturday, 17 October 2026</p>
+        <h2 class="font-display text-[clamp(2.8rem,8vw,4.5rem)] text-moss-dark font-light">The Big Day</h2>
+        <div class="flex items-center justify-center gap-4 mt-6">
+          <div class="w-12 h-px bg-gold/50"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-gold/50"></div>
+          <div class="w-12 h-px bg-gold/50"></div>
+        </div>
+      </div>
+
+      <!-- Schedule cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Ceremony -->
+        <div class="bg-parchment p-8 border-t-4 border-gold text-center fade-up group hover:shadow-lg transition-shadow duration-300">
+          <div class="w-12 h-12 mx-auto mb-6 text-gold">
+            <!-- Wedding rings icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.25">
+              <circle cx="8.5" cy="12" r="4.75"/>
+              <circle cx="15.5" cy="12" r="4.75"/>
+            </svg>
+          </div>
+          <p class="font-body text-xs tracking-[0.3em] uppercase text-gold mb-3">Ceremony</p>
+          <h3 class="font-display text-2xl text-moss-dark font-light mb-3">Akad Nikah</h3>
+          <p class="font-body text-sm text-stone">5:00 PM</p>
+          <p class="font-body text-xs text-stone/60 mt-1">Main Hall</p>
+        </div>
+
+        <!-- Cocktails -->
+        <div class="bg-parchment p-8 border-t-4 border-gold text-center fade-up group hover:shadow-lg transition-shadow duration-300">
+          <div class="w-12 h-12 mx-auto mb-6 text-gold">
+            <!-- Champagne flute icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.25">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 3.5h9L14 13.5l-2 1v4.5M10 13.5l-2.5 1v4.5M8 19h8"/>
+            </svg>
+          </div>
+          <p class="font-body text-xs tracking-[0.3em] uppercase text-gold mb-3">Cocktail Hour</p>
+          <h3 class="font-display text-2xl text-moss-dark font-light mb-3">Welcome Drinks</h3>
+          <p class="font-body text-sm text-stone">12:00 PM</p>
+          <p class="font-body text-xs text-stone/60 mt-1">Garden Terrace</p>
+        </div>
+
+        <!-- Dinner -->
+        <div class="bg-parchment p-8 border-t-4 border-gold text-center fade-up group hover:shadow-lg transition-shadow duration-300">
+          <div class="w-12 h-12 mx-auto mb-6 text-gold">
+            <!-- Fork & knife icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.25">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 3v5a2 2 0 002 2v11M10 3v5a2 2 0 01-2 2M16 3v18"/>
+            </svg>
+          </div>
+          <p class="font-body text-xs tracking-[0.3em] uppercase text-gold mb-3">Dinner</p>
+          <h3 class="font-display text-2xl text-moss-dark font-light mb-3">Wedding Feast</h3>
+          <p class="font-body text-sm text-stone">2:00 PM</p>
+          <p class="font-body text-xs text-stone/60 mt-1">Grand Ballroom</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ LOCATION -->
+  <section id="location" class="py-24 md:py-36 bg-moss">
+    <div class="max-w-5xl mx-auto px-6">
+
+      <!-- Heading -->
+      <div class="text-center mb-16 fade-up">
+        <p class="font-body text-xs tracking-[0.4em] uppercase text-gold mb-4">Find Us Here</p>
+        <h2 class="font-display text-[clamp(2.8rem,8vw,4.5rem)] text-white font-light">Location</h2>
+        <div class="flex items-center justify-center gap-4 mt-6">
+          <div class="w-12 h-px bg-gold/40"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-gold/40"></div>
+          <div class="w-12 h-px bg-gold/40"></div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+
+        <!-- Map embed -->
+        <div class="fade-up">
+          <div class="overflow-hidden shadow-2xl" style="aspect-ratio: 4/3;">
+            <iframe
+              title="Anggun On Marina One location map"
+              src="https://maps.google.com/maps?q=5+Straits+View+Singapore+018935&z=17&output=embed"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Venue details -->
+        <div class="text-white fade-up">
+          <h3 class="font-display text-3xl md:text-4xl font-light mb-2">Anggun On Marina One</h3>
+          <div class="w-10 h-px bg-gold mb-8"></div>
+
+          <div class="space-y-5 mb-10">
+            <div class="flex items-start gap-3">
+              <!-- Location pin icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gold flex-shrink-0 mt-0.5" fill="none"
+                   viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+              <p class="font-body text-sm text-white/75 leading-relaxed">
+                5 Straits View, #02-04/05/06 West Tower<br>
+                Marina One, Singapore 018935
+              </p>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <!-- Calendar icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gold flex-shrink-0 mt-0.5" fill="none"
+                   viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+              </svg>
+              <p class="font-body text-sm text-white/75 leading-relaxed">
+                Saturday, 17 October 2026<br>
+                Ceremony begins at 6:00 PM
+              </p>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <!-- Car/parking icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gold flex-shrink-0 mt-0.5" fill="none"
+                   viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M5 17H3v-6l2-5h14l2 5v6h-2M5 17a2 2 0 104 0M15 17a2 2 0 104 0"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 11h14"/>
+              </svg>
+              <p class="font-body text-sm text-white/75">Complimentary valet parking available.</p>
+            </div>
+          </div>
+
+          <!-- Add to Calendar button -->
+          <button id="addToCalendar"
+                  class="inline-flex items-center gap-3 font-body text-xs tracking-[0.25em] uppercase px-8 py-4 border border-gold/70 text-gold hover:bg-gold hover:text-moss-dark transition-all duration-300">
+            <!-- Calendar plus icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                 stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+              <line x1="12" y1="15" x2="12" y2="19"/>
+              <line x1="10" y1="17" x2="14" y2="17"/>
+            </svg>
+            Add to Calendar
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ RSVP -->
+  <section id="rsvp" class="py-24 md:py-36 bg-parchment">
+    <div class="max-w-lg mx-auto px-6">
+
+      <!-- Heading -->
+      <div class="text-center mb-12 fade-up">
+        <p class="font-body text-xs tracking-[0.4em] uppercase text-gold mb-4">
+          Kindly Reply By 1 June 2026
+        </p>
+        <h2 class="font-display text-[clamp(2.8rem,8vw,4.5rem)] text-moss-dark font-light">RSVP</h2>
+        <div class="flex items-center justify-center gap-4 mt-6">
+          <div class="w-12 h-px bg-gold/50"></div>
+          <div class="w-1.5 h-1.5 rounded-full bg-gold/50"></div>
+          <div class="w-12 h-px bg-gold/50"></div>
+        </div>
+      </div>
+
+      <!-- RSVP Card -->
+      <div class="rsvp-card bg-white shadow-2xl p-8 md:p-12 fade-up">
+
+        <!-- ══ STEP 1: Attending? ══ -->
+        <div id="step-1">
+          <p class="font-display text-[clamp(1.75rem,5vw,2.25rem)] text-moss-dark font-light text-center mb-2">
+            Will you be joining us?
+          </p>
+          <p class="font-body text-sm text-stone/80 text-center mb-10">
+            We'd love to celebrate with you.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <button id="btn-yes"
+                    class="flex-1 py-4 bg-moss text-white font-body text-sm tracking-[0.2em] uppercase hover:bg-moss-dark transition-colors duration-200">
+              Heck Yes! 🎉
+            </button>
+            <button id="btn-no"
+                    class="flex-1 py-4 border border-stone/30 text-stone font-body text-sm tracking-[0.2em] uppercase hover:border-stone hover:text-moss-dark transition-all duration-200">
+              Sadly, No
+            </button>
+          </div>
+        </div>
+
+        <!-- ══ STEP NO: Can't Attend ══ -->
+        <div id="step-no" class="hidden">
+          <div class="text-center mb-8">
+            <p class="font-display text-[clamp(1.75rem,5vw,2.25rem)] text-moss-dark font-light mb-3">
+              We'll miss you!
+            </p>
+            <p class="font-body text-sm text-stone/80 leading-relaxed">
+              Your presence in spirit means the world to us. If you'd like to leave a message for the couple, please do so below.
+            </p>
+          </div>
+          <div class="mb-5">
+            <label for="no-name" class="font-body text-xs tracking-[0.2em] uppercase text-stone mb-2 block">
+              Your Name
+            </label>
+            <input type="text" id="no-name" placeholder="Full Name"
+                   class="rsvp-input w-full">
+          </div>
+          <div class="mb-8">
+            <label for="well-wish" class="font-body text-xs tracking-[0.2em] uppercase text-stone mb-2 block">
+              Leave a Well Wish <span class="text-stone/50 normal-case tracking-normal">(optional)</span>
+            </label>
+            <textarea id="well-wish" rows="4"
+                      placeholder="Write your message to the happy couple..."
+                      class="rsvp-input w-full resize-none"></textarea>
+          </div>
+          <button id="btn-submit-no"
+                  class="rsvp-submit-btn w-full py-4 bg-moss text-white font-body text-sm tracking-[0.2em] uppercase hover:bg-moss-dark transition-colors duration-200">
+            Send My Wishes
+          </button>
+          <button class="rsvp-back mt-4 w-full text-center font-body text-xs text-stone/50 hover:text-stone underline"
+                  data-target="step-1">
+            ← Go back
+          </button>
+        </div>
+
+        <!-- ══ STEP 2: Name ══ -->
+        <div id="step-yes-2" class="hidden">
+          <div class="mb-8 text-center">
+            <p class="font-body text-xs tracking-[0.3em] uppercase text-gold mb-3">Step 1 of 4</p>
+            <p class="font-display text-[clamp(1.75rem,5vw,2.25rem)] text-moss-dark font-light">
+              Tell us who you are.
+            </p>
+          </div>
+          <div class="mb-8">
+            <label for="rsvp-name" class="font-body text-xs tracking-[0.2em] uppercase text-stone mb-2 block">
+              Full Name <span class="text-gold">*</span>
+            </label>
+            <input type="text" id="rsvp-name" placeholder="Your Full Name"
+                   class="rsvp-input w-full">
+            <p id="name-error" class="text-xs text-red-400 mt-2 hidden">
+              Please enter your name to continue.
+            </p>
+          </div>
+          <button id="btn-next-2"
+                  class="w-full py-4 bg-moss text-white font-body text-sm tracking-[0.2em] uppercase hover:bg-moss-dark transition-colors duration-200">
+            Continue →
+          </button>
+          <button class="rsvp-back mt-4 w-full text-center font-body text-xs text-stone/50 hover:text-stone underline"
+                  data-target="step-1">
+            ← Go back
+          </button>
+        </div>
+
+        <!-- ══ STEP 3: Side ══ -->
+        <div id="step-yes-3" class="hidden">
+          <div class="mb-8 text-center">
+            <p class="font-body text-xs tracking-[0.3em] uppercase text-gold mb-3">Step 2 of 4</p>
+            <p class="font-display text-[clamp(1.75rem,5vw,2.25rem)] text-moss-dark font-light">
+              Which side are you on?
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-4 mb-8">
+            <button class="side-btn py-8 border-2 border-stone/20 text-center hover:border-gold transition-all duration-200 group"
+                    data-side="Team Bride">
+              <span class="text-3xl block mb-3">👰</span>
+              <span class="font-body text-xs tracking-[0.1em] uppercase text-stone group-hover:text-moss-dark transition-colors">
+                Team Bride
+              </span>
+            </button>
+            <button class="side-btn py-8 border-2 border-stone/20 text-center hover:border-gold transition-all duration-200 group"
+                    data-side="Team Groom">
+              <span class="text-3xl block mb-3">🤵</span>
+              <span class="font-body text-xs tracking-[0.1em] uppercase text-stone group-hover:text-moss-dark transition-colors">
+                Team Groom
+              </span>
+            </button>
+          </div>
+          <button id="btn-next-3"
+                  class="w-full py-4 bg-moss text-white font-body text-sm tracking-[0.2em] uppercase hover:bg-moss-dark transition-colors duration-200">
+            Continue →
+          </button>
+          <button class="rsvp-back mt-4 w-full text-center font-body text-xs text-stone/50 hover:text-stone underline"
+                  data-target="step-yes-2">
+            ← Go back
+          </button>
+        </div>
+
+        <!-- ══ STEP 4: Pax ══ -->
+        <div id="step-yes-4" class="hidden">
+          <div class="mb-8 text-center">
+            <p class="font-body text-xs tracking-[0.3em] uppercase text-gold mb-3">Step 3 of 4</p>
+            <p class="font-display text-[clamp(1.75rem,5vw,2.25rem)] text-moss-dark font-light">
+              Bringing a plus one?
+            </p>
+          </div>
+          <div class="flex gap-3 mb-8">
+            <button class="pax-btn flex-1 py-5 border-2 border-stone/20 font-body text-sm text-stone hover:border-gold hover:text-moss-dark transition-all duration-200"
+                    data-pax="1">
+              1 Pax
+            </button>
+            <button class="pax-btn flex-1 py-5 border-2 border-stone/20 font-body text-sm text-stone hover:border-gold hover:text-moss-dark transition-all duration-200"
+                    data-pax="2">
+              2 Pax
+            </button>
+            <button class="pax-btn flex-1 py-5 border-2 border-stone/20 font-body text-sm text-stone hover:border-gold hover:text-moss-dark transition-all duration-200"
+                    data-pax="3+">
+              3+ Pax
+            </button>
+          </div>
+          <button id="btn-next-4"
+                  class="w-full py-4 bg-moss text-white font-body text-sm tracking-[0.2em] uppercase hover:bg-moss-dark transition-colors duration-200">
+            Continue →
+          </button>
+          <button class="rsvp-back mt-4 w-full text-center font-body text-xs text-stone/50 hover:text-stone underline"
+                  data-target="step-yes-3">
+            ← Go back
+          </button>
+        </div>
+
+        <!-- ══ STEP 5: Dietary ══ -->
+        <div id="step-yes-5" class="hidden">
+          <div class="mb-8 text-center">
+            <p class="font-body text-xs tracking-[0.3em] uppercase text-gold mb-3">Step 4 of 4</p>
+            <p class="font-display text-[clamp(1.75rem,5vw,2.25rem)] text-moss-dark font-light">
+              Any dietary restrictions?
+            </p>
+            <p class="font-body text-sm text-stone/80 mt-2">
+              We want everyone to enjoy the feast.
+            </p>
+          </div>
+          <div class="mb-8">
+            <textarea id="rsvp-dietary" rows="4"
+                      placeholder="e.g. Vegetarian, nut allergy, halal only... (leave blank if none)"
+                      class="rsvp-input w-full resize-none"></textarea>
+          </div>
+          <button id="btn-submit-yes"
+                  class="rsvp-submit-btn w-full py-4 bg-moss text-white font-body text-sm tracking-[0.2em] uppercase hover:bg-moss-dark transition-colors duration-200">
+            Confirm RSVP ✓
+          </button>
+          <button class="rsvp-back mt-4 w-full text-center font-body text-xs text-stone/50 hover:text-stone underline"
+                  data-target="step-yes-4">
+            ← Go back
+          </button>
+        </div>
+
+        <!-- ══ SUCCESS SCREEN ══ -->
+        <div id="step-success" class="hidden text-center py-6">
+          <div class="w-16 h-16 rounded-full bg-moss/10 flex items-center justify-center mx-auto mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-moss" fill="none"
+                 viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+            </svg>
+          </div>
+          <p id="success-title" class="font-display text-[clamp(2rem,6vw,3rem)] text-moss-dark font-light mb-3">
+            See you there!
+          </p>
+          <p id="success-message" class="font-body text-sm text-stone/80 leading-relaxed">
+            Thank you for your RSVP. We cannot wait to celebrate with you on the 17th of October!
+          </p>
+          <div class="flex items-center justify-center gap-4 mt-8">
+            <div class="w-8 h-px bg-gold/50"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-gold/50"></div>
+            <div class="w-8 h-px bg-gold/50"></div>
+          </div>
+        </div>
+
+        <!-- ══ ERROR MESSAGE ══ -->
+        <div id="rsvp-error"
+             class="hidden mt-6 p-4 bg-red-50 border border-red-200 text-red-600 font-body text-sm text-center">
+        </div>
+
+        <!-- ══ LOADING OVERLAY ══ -->
+        <div id="rsvp-loading"
+             class="hidden rsvp-loading-overlay">
+          <div class="loading-spinner"></div>
+        </div>
+
+      </div><!-- /rsvp-card -->
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ FOOTER -->
+  <footer class="bg-moss-dark py-14 text-center">
+    <p class="font-display text-4xl text-white font-light mb-3">
+      <em>Fauzi &amp; Diyanah</em>
+    </p>
+    <p class="font-body text-xs tracking-[0.35em] uppercase text-gold/70">
+      17 October 2026 &nbsp;·&nbsp; Anggun On Marina One
+    </p>
+    <div class="flex items-center justify-center gap-4 mt-8 mb-8">
+      <div class="w-10 h-px bg-gold/20"></div>
+      <div class="w-1 h-1 rounded-full bg-gold/20"></div>
+      <div class="w-10 h-px bg-gold/20"></div>
+    </div>
+    <p class="font-body text-xs text-white/25 tracking-widest">Made with love &hearts;</p>
+  </footer>
+
+  <!-- ════ Easter Egg: Edwin Sng ════ -->
+  <div id="edwin-popup" aria-hidden="true">
+    <div class="relative w-72 bg-moss-dark shadow-2xl overflow-hidden" style="border: 2px solid rgba(201,168,76,0.5); border-radius: 2px;">
+      <!-- Header -->
+      <div class="flex items-center justify-between px-3 py-2" style="background: rgba(201,168,76,0.15);">
+        <span class="font-body text-xs tracking-widest uppercase" style="color:#C9A84C;">Wrong team yea 😅</span>
+        <button id="edwin-close"
+                aria-label="Close"
+                style="color:rgba(201,168,76,0.7); font-size:1.1rem; line-height:1; background:none; border:none; cursor:pointer; padding:0 2px;"
+                onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(201,168,76,0.7)'">✕</button>
+      </div>
+      <!-- Video -->
+      <video id="edwin-video"
+             src="Media/wrong.mp4"
+             class="w-full block"
+             controls
+             playsinline
+             preload="none">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/calendar.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
