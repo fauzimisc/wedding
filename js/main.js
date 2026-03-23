@@ -214,16 +214,29 @@ function initRSVPForm() {
   // Step 4 — pax selection via dropdown
   const paxSelect = document.getElementById('pax-select');
   const plusOnesContainer = document.getElementById('plus-ones-container');
-  const plusOnesNamesInput = document.getElementById('plus-ones-names');
+  const plusOnesInputsDiv = document.getElementById('plus-ones-inputs');
   const plusOnesError = document.getElementById('plus-ones-error');
 
   paxSelect?.addEventListener('change', (e) => {
+    const totalPax = parseInt(e.target.value);
     rsvpData.pax = e.target.value;
-    if (parseInt(e.target.value) > 1) {
+    
+    if (totalPax > 1) {
       plusOnesContainer?.classList.remove('hidden');
+      if (plusOnesInputsDiv) {
+        plusOnesInputsDiv.innerHTML = ''; // clear existing inputs
+        const numGuests = totalPax - 1;
+        for (let i = 1; i <= numGuests; i++) {
+          const input = document.createElement('input');
+          input.type = 'text';
+          input.className = 'rsvp-input w-full';
+          input.placeholder = `Guest ${i} Full Name`;
+          plusOnesInputsDiv.appendChild(input);
+        }
+      }
     } else {
       plusOnesContainer?.classList.add('hidden');
-      if (plusOnesNamesInput) plusOnesNamesInput.value = '';
+      if (plusOnesInputsDiv) plusOnesInputsDiv.innerHTML = '';
       if (plusOnesError) plusOnesError.classList.add('hidden');
     }
   });
@@ -234,14 +247,27 @@ function initRSVPForm() {
     rsvpData.pax = currentPax.toString();
     
     if (currentPax > 1) {
-      const names = plusOnesNamesInput?.value.trim();
-      if (!names) {
+      const inputs = plusOnesInputsDiv?.querySelectorAll('input') || [];
+      let allFilled = true;
+      let names = [];
+      
+      inputs.forEach(input => {
+        const val = input.value.trim();
+        if (!val) {
+          allFilled = false;
+          input.style.borderColor = '#f87171'; // highlight empty in red
+        } else {
+          input.style.borderColor = ''; // reset border
+          names.push(val);
+        }
+      });
+      
+      if (!allFilled) {
         plusOnesError?.classList.remove('hidden');
-        plusOnesNamesInput?.focus();
         return;
       }
       plusOnesError?.classList.add('hidden');
-      rsvpData.plusOnesNames = names;
+      rsvpData.plusOnesNames = names.join(', ');
     } else {
       rsvpData.plusOnesNames = '';
     }

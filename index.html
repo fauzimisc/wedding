@@ -505,10 +505,10 @@
           <div class="mb-6 relative">
             <select id="pax-select" class="rsvp-input w-full appearance-none bg-white pr-10 cursor-pointer font-body text-sm text-moss-dark">
               <option value="1">Just me (1 Pax)</option>
-              <option value="2">Bringing a Plus One (2 Pax)</option>
-              <option value="3">Bringing family/friends (3 Pax)</option>
-              <option value="4">Bringing family/friends (4 Pax)</option>
-              <option value="5">Bringing family/friends (5+ Pax)</option>
+              <option value="2">Me + 1 (2 Pax)</option>
+              <option value="3">Me + 2 (3 Pax)</option>
+              <option value="4">Me + 3 (4 Pax)</option>
+              <option value="5">Me + 4 (5 Pax)</option>
             </select>
             <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-stone">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -517,14 +517,14 @@
             </div>
           </div>
           <div id="plus-ones-container" class="mb-8 hidden">
-            <label for="plus-ones-names" class="font-body text-xs tracking-[0.2em] uppercase text-stone mb-2 block">
+            <p class="font-body text-xs tracking-[0.2em] uppercase text-stone mb-3 block">
               Name(s) of your Plus One(s) <span class="text-gold">*</span>
-            </label>
-            <textarea id="plus-ones-names" rows="2"
-                      placeholder="Please list their full names..."
-                      class="rsvp-input w-full resize-none"></textarea>
+            </p>
+            <div id="plus-ones-inputs" class="space-y-3">
+              <!-- Dynamically populated by JS -->
+            </div>
             <p id="plus-ones-error" class="text-xs text-red-400 mt-2 hidden">
-              Please provide the name(s) of your additional guest(s).
+              Please fill in the names for all your guests.
             </p>
           </div>
           <button id="btn-next-4"
