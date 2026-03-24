@@ -158,7 +158,8 @@ function initCountdown() {
   if (!elDays || !elHours || !elMins || !elSecs) return;
 
   // The Big Day: 17 October 2026, 17:00:00 (5:00 PM) SGT (+08:00)
-  const targetDate = new Date('2026-10-17T17:00:00+08:00').getTime();
+  // Using UTC time (09:00:00 Z) to ensure cross-browser compatibility (e.g. iOS Safari)
+  const targetDate = new Date('2026-10-17T09:00:00Z').getTime();
 
   function updateTimer() {
     const now = new Date().getTime();
