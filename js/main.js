@@ -433,7 +433,7 @@ function showSuccessScreen(attending) {
     if (message) message.textContent = "Thank you for your RSVP. We can't wait to celebrate with you on 17 October 2026! Invites will be sent out closer to the date so keep your eyes peeled!";
     launchConfetti();
   } else {
-    if (title)   title.textContent   = 'Thank you ♥';
+    if (title)   title.textContent   = 'Thank you ♥\uFE0E';
     if (message) message.textContent = 'We\'ll miss you, but your kind wishes mean everything to us both.';
   }
 }
