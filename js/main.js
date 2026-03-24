@@ -204,7 +204,18 @@ function initRSVPForm() {
 
   // Step No — submit can't-attend
   document.getElementById('btn-submit-no')?.addEventListener('click', async () => {
-    rsvpData.name    = document.getElementById('no-name')?.value.trim() || '';
+    const nameInput = document.getElementById('no-name');
+    const nameError = document.getElementById('no-name-error');
+    const name = nameInput?.value.trim() || '';
+
+    if (!name) {
+      nameError?.classList.remove('hidden');
+      nameInput?.focus();
+      return;
+    }
+    nameError?.classList.add('hidden');
+
+    rsvpData.name    = name;
     rsvpData.message = document.getElementById('well-wish')?.value.trim() || '';
     await submitRSVP({ ...rsvpData });
   });

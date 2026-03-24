@@ -410,10 +410,13 @@
           </div>
           <div class="mb-5">
             <label for="no-name" class="font-body text-xs tracking-[0.2em] uppercase text-stone mb-2 block">
-              Your Name
+              Your Name <span class="text-gold">*</span>
             </label>
             <input type="text" id="no-name" placeholder="Full Name"
                    class="rsvp-input w-full">
+            <p id="no-name-error" class="text-xs text-red-400 mt-2 hidden">
+              Please enter your name to continue.
+            </p>
           </div>
           <div class="mb-8">
             <label for="well-wish" class="font-body text-xs tracking-[0.2em] uppercase text-stone mb-2 block">
