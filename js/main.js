@@ -39,7 +39,7 @@ const WRONG_TEAM_LIST = [
   // Guest who might skip their surname or write it differently
   {
     name:        'Lin Yongjie',
-    aliases:     ['yongjie', 'lin yong jie'],
+    aliases:     ['yongjie', 'lin yongjie', 'yongjie lin'],
     correctTeam: 'Team Groom',
   },
 
