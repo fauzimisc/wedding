@@ -108,6 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initScrollObserver();
   initRSVPForm();
+  initCountdown();
 });
 
 // ── Navbar: transparent → frosted on scroll ─────
@@ -145,6 +146,45 @@ function initScrollObserver() {
   );
 
   elements.forEach(el => observer.observe(el));
+}
+
+// ── Countdown Timer ──────────────────────────────
+function initCountdown() {
+  const elDays  = document.getElementById('cd-days');
+  const elHours = document.getElementById('cd-hours');
+  const elMins  = document.getElementById('cd-mins');
+  const elSecs  = document.getElementById('cd-secs');
+  
+  if (!elDays || !elHours || !elMins || !elSecs) return;
+
+  // The Big Day: 17 October 2026, 17:00:00 (5:00 PM) SGT (+08:00)
+  const targetDate = new Date('2026-10-17T17:00:00+08:00').getTime();
+
+  function updateTimer() {
+    const now = new Date().getTime();
+    const diff = targetDate - now;
+
+    if (diff <= 0) {
+      elDays.textContent  = '00';
+      elHours.textContent = '00';
+      elMins.textContent  = '00';
+      elSecs.textContent  = '00';
+      return;
+    }
+
+    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+    elDays.textContent  = d.toString().padStart(2, '0');
+    elHours.textContent = h.toString().padStart(2, '0');
+    elMins.textContent  = m.toString().padStart(2, '0');
+    elSecs.textContent  = s.toString().padStart(2, '0');
+  }
+
+  updateTimer(); // run immediately
+  setInterval(updateTimer, 1000);
 }
 
 // ── RSVP form wiring ─────────────────────────────
@@ -381,7 +421,7 @@ function showSuccessScreen(attending) {
     if (message) message.textContent = 'Thank you for your RSVP. We cannot wait to celebrate with you on the 17th of October!';
     launchConfetti();
   } else {
-    if (title)   title.textContent   = 'Thank you ♡';
+    if (title)   title.textContent   = 'Thank you ♥';
     if (message) message.textContent = 'We\'ll miss you, but your kind wishes mean everything to us both.';
   }
 }
