@@ -419,7 +419,7 @@ function showSuccessScreen(attending) {
 
   if (attending) {
     if (title)   title.textContent   = 'See you there! 🥂';
-    if (message) message.textContent = 'Thank you for your RSVP. We cannot wait to celebrate with you on the 17th of October!';
+    if (message) message.textContent = 'Thank you for your RSVP. We cannot wait to celebrate with you on 17 October 2026! Invites will be sent out closer to the date so keep your eyes peeled!';
     launchConfetti();
   } else {
     if (title)   title.textContent   = 'Thank you ♥';
