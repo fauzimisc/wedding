@@ -7,7 +7,7 @@
 // ═══════════════════════════════════════════════
 
 const EVENT = {
-  title:       'Wedding of Fauzi & Diyanah',
+  title:       'Wedding of Ahmad Fauzi & Sharifah Diyanah',
   location:    'Anggun On Marina One, 5 Straits View #02-04/05/06 West Tower, Marina One, Singapore 018935',
   description: 'You are cordially invited to the wedding of Fauzi & Diyanah. Ceremony begins at 5:00 PM. Dress code: Formal.',
 
