@@ -9,7 +9,7 @@
 const EVENT = {
   title:       'Wedding of Ahmad Fauzi & Sharifah Diyanah',
   location:    'Anggun On Marina One, 5 Straits View #02-04/05/06 West Tower, Marina One, Singapore 018935',
-  description: 'You are cordially invited to the wedding of Fauzi & Diyanah. Ceremony begins at 5:00 PM. Dress code: Formal.',
+  description: 'You are cordially invited to the wedding of Ahmad Fauzi & Sharifah Diyanah. Ceremony begins at 5:00 PM. Dress code: Formal.',
 
   // ICS format local time for Apple: YYYYMMDDTHHMMSS
   startDateICS: '20261017T170000',
