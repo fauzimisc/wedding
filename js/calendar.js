@@ -9,17 +9,17 @@
 const EVENT = {
   title:       'Wedding of Ahmad Fauzi & Sharifah Diyanah',
   location:    'Anggun On Marina One, 5 Straits View #02-04/05/06 West Tower, Marina One, Singapore 018935',
-  description: 'You are cordially invited to the wedding of Ahmad Fauzi & Sharifah Diyanah. Nikah Ceremony begins at 6:00 PM. Dress code: Formal.',
+  description: 'You are cordially invited to the wedding of Ahmad Fauzi & Sharifah Diyanah. Guest Registration and Arrival begins at 7:00 PM. Please be seated by 7:15 PM. Dress code: Formal.',
 
   // ICS format local time for Apple: YYYYMMDDTHHMMSS
-  startDateICS: '20261017T180000',
-  endDateICS:   '20261017T230000',
+  startDateICS: '20261017T190000',
+  endDateICS:   '20261017T220000',
 
   // Google Calendar format UTC: YYYYMMDDTHHMMSSZ
-  // 6:00 PM SGT = 10:00:00Z
-  // 11:00 PM SGT = 15:00:00Z
-  startDateGoogle: '20261017T100000Z',
-  endDateGoogle:   '20261017T150000Z',
+  // 7:00 PM SGT = 11:00:00Z
+  // 10:00 PM SGT = 14:00:00Z
+  startDateGoogle: '20261017T110000Z',
+  endDateGoogle:   '20261017T140000Z',
 
   // Optional: set a reminder (e.g. 1 day before = P1D)
   reminderOffset: '-P1D',
